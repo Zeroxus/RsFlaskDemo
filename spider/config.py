@@ -1,5 +1,5 @@
-number='01412101021'
-password='1069409007wen'
+number='*******'
+password='*********'
 select='cert_no'
 agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
