@@ -2,6 +2,7 @@ import requests
 from openpyxl import Workbook,load_workbook
 from bs4 import BeautifulSoup
 from config import *
+from Analyse.ISBN import ISBN
 
 
 class spider:
@@ -79,7 +80,9 @@ if __name__=='__main__':
     loginResponse=session.post(url=loginUrl,headers=headers,data=postData)
     cookie = loginResponse.cookies
     s = spider(targetUrl,cookie,session)
-    s.createExcel()
+    # s.createExcel()
     for i in range(1,8):
         book_list = s.makeData(i)
-        s.saveToExcel(book_list)
+        ISBN().getISBN(book_list)
+        # print(book_list)
+        # s.saveToExcel(book_list)
